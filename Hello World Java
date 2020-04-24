@@ -1,5 +1,0 @@
-public class static HelloWorld{
-	public static void main(string[] args){
-		system.out.println("Hello World!");
-	} //close method main
-}// close class HelloWorld
