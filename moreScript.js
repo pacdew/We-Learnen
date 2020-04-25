@@ -9,3 +9,18 @@ else{ //"victor Manzanera is cool."
 }
 console.log(myName);
 console.log(random);
+
+/*
+for(var i = 0; i < myName.length; i++){
+  console.log(myName[i]);
+}
+*/
+console.log(adjective);
+
+function addition(numberOne, numberTwo){
+  var result = 0;
+
+  result = numberOne + numberTwo;
+
+  return result;
+}
