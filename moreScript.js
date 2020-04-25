@@ -9,3 +9,13 @@ else{ //"victor Manzanera is cool."
 }
 console.log(myName);
 console.log(random);
+
+var message = window.prompt("please enter a message");
+
+console.log(message);
+
+/* lists out every character in the string
+for(var i = 0; i < myName.length; i++){
+  console.log(myName[i]);
+}
+*/
