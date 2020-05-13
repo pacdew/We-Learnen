@@ -16,3 +16,6 @@ This git hub repository is new to me but does seem very useful!
   - I mostly worked on javascript within html pages using node. Tried to create a basic set of pages that can be accessed each other.
   - I definatly need to work with firebase and build up more of an application.
   - Otherwise i have been quite busy with other assignments. I do have plans to dedicate more time to this application.
+
+5/15/2020 - More dedicated time
+  - Spent some time setting up firebase as shown in the lecture, still have much more to do.
