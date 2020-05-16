@@ -19,3 +19,6 @@ This git hub repository is new to me but does seem very useful!
 
 5/15/2020 - More dedicated time
   - Spent some time setting up firebase as shown in the lecture, still have much more to do.
+  - set up slight functionality within the firebase application.
+  - will work on actual user identification and login functionality.
+  - will work on being able to upload lists and the ability to edit them if user is correctly validated
