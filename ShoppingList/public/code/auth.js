@@ -44,7 +44,10 @@
     .catch(function(error){
       console.log("Error Logging out.");
     });
+<<<<<<< HEAD
     message.innerHTML="<p>Logged out.</p>";
+=======
+>>>>>>> e5059d76435b7493dc02463bf849382131172768
     alert("You have been logged out!");
   };
 
@@ -69,7 +72,11 @@
 
   function authStateChange(user){
     if(user === null){
+<<<<<<< HEAD
       //message.innerHTML="<p>Logged out.</p>";
+=======
+      message.innerHTML="<p>Logged out.</p>";
+>>>>>>> e5059d76435b7493dc02463bf849382131172768
       a_logging_in.style.display = "block";
       a_logged_in.style.display = "none";
       a_send_link_button.disabled = false;
