@@ -50,20 +50,21 @@
   </head>
   <div class="header">
     <a href="#default" class="logo">
-      <img  src="/images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
+      <img  src="./images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
       Shopping Lists
     </a>
     <div class="header-right">
-      <a class="active" href="/#">Home</a>
-      <a target="_blank" href="https://github.com/pacdew/We-Learnen">Github</a>
+      <!-- <a class="active" href="/#">Home</a> -->
       <a id="get_log_in">Login</a>
+      <a class="active" target="_blank" href="https://github.com/pacdew/We-Learnen">Github</a>
     </div>
   </div>
   <body>
     <div id=format>
       <div id="general" style="display: block">
         <h2>This is the Shopping List application. I hope You enjoy!</h2>
-        <img src="/images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
+        <!--<input id="test_btn" type="submit" value="TEST">-->
+        <img src="./images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
         <h1>Successfully set up a webapp hosted by firebase</h1>
         <p>This is the firebase https server that i have set up so far. Below i have added a link to my repository no matter how unnecessary it might be.</p>
         <a target="_blank" href="https://github.com/pacdew/We-Learnen">My github Repository</a>
@@ -73,11 +74,11 @@
       </div>
       <div id="a_logging_in" style="display: none">
         <!--For testing sake my email is the value by default-->
-        <p>Email: <input type="text" id="email_sign_in" value="006075871@coyote.csusb.edu"></input></p>
+        <p>Email: <input type="text" id="a_email" value="006075871@coyote.csusb.edu"></input></p>
         <input id="a_send_link_button" type="submit" value="Send Login Link">
       </div>
       <div id="a_logged_in" style="display: none">
-        <input id="logout_button" type="submit" value="Log Out">
+        <input id="a_logout_button" type="submit" value="Log Out">
       </div>
     </div>
 <!--
