@@ -25,3 +25,4 @@ This git hub repository is new to me but does seem very useful!
 
 5/22/2020 - authentication between users
   - Was able to add Email login for a user...
+  - Tried adding some more user authentication but had much to do and wasn't able to progress as much

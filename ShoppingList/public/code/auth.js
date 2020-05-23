@@ -1,5 +1,7 @@
 (function(){
   //console.log("auth.js loaded");
+  window.auth = {}
+
   function sendEmailLoginLink(){
     a_send_link_button.disabled = true;
     const email = a_email.value;
@@ -22,8 +24,9 @@
   function loginPageLoad(){
     let email = localStorage.getItem("email");
     if(!email){
-      email = window.prompt('Please provide your email for confirmation');
+      email = prompt('Please provide your email for confirmation');
     }
+
     firebase.auth().signInWithEmailLink(email, location.href)
     .then(function(result){
       localStorage.removeItem("email")
@@ -32,10 +35,10 @@
     .catch(function(error){
       console.log("Error Logging in.");
     })
+
   };
 
   function logout(){
-    a_logout_button.disabled = true;
     firebase.auth().signOut()
     //.then(function(){
       //a_logged_in.style.display = "none";
@@ -69,29 +72,31 @@
 
   function authStateChange(user){
     if(user === null){
-      //message.innerHTML="<p>Logged out.</p>";
+      message.innerHTML="<p>Logged out.</p>";
       a_logging_in.style.display = "block";
+      //get_log_in.addEventListener('click', () => {a_logging_in.style.display = "block"});
       a_logged_in.style.display = "none";
       a_send_link_button.disabled = false;
-      //get_log_in.addEventListener('click', a_logging_in.style.display = "block");
+      if (auth.logout)  auth.logout();
     }
     else{
       message.innerHTML = "<p>Logged In.</p>";
+      //get_log_in.addEventListener('click', () => {alert("Already Signed in!")});
       a_logging_in.style.display = "none";
       a_logged_in.style.display = "block";
       a_logout_button.disabled = false;
-      //get_log_in.addEventListener('click', () => {alert("Already Signed in!")});
+      if (auth.login) auth.login();
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    const auth = firebase.auth();
+    const authf = firebase.auth();
     message.innerHTML="<p>Loaded</p>";
     a_send_link_button.addEventListener('click', sendEmailLoginLink);
     a_logout_button.addEventListener('click', logout);
     //get_log_in.addEventListener('click', () => {a_logging_in.style.display = "block"});
-    auth.onAuthStateChanged(authStateChange);
-    if(auth.isSignInWithEmailLink(location.href)){
+    authf.onAuthStateChanged(authStateChange);
+    if(authf.isSignInWithEmailLink(location.href)){
       loginPageLoad();
     }
   });
