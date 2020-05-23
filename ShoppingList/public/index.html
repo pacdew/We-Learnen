@@ -16,7 +16,8 @@
     -->
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <script src="./code/auth.js"></script>
+    <script defer src="./code/auth.js"></script>
+    <script defer src="./code/storage.js"></script>
 
     <style media="screen">
       * {box-sizing: border-box;}
@@ -32,7 +33,6 @@
         .header-right { float: none; }
       }
     </style>
-
     <style media="screen">
       body { background: #2e2e2d; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #format { background: #4a4a4a; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
@@ -47,23 +47,24 @@
         body { border-top: 16px solid #ffa100; }
       }
     </style>
-  </head>
-  <div class="header">
-    <a href="#default" class="logo">
-      <img  src="/images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
-      Shopping Lists
-    </a>
-    <div class="header-right">
-      <a class="active" href="/#">Home</a>
-      <a target="_blank" href="https://github.com/pacdew/We-Learnen">Github</a>
-      <a id="get_log_in">Login</a>
+    <div class="header">
+      <a href="#default" class="logo">
+        <img  src="./images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
+        Shopping Lists
+      </a>
+      <div class="header-right">
+        <!-- <a class="active" href="/#">Home</a> -->
+        <a id="get_log_in">Login</a>
+        <a class="active" target="_blank" href="https://github.com/pacdew/We-Learnen">Github</a>
+      </div>
     </div>
-  </div>
+  </head>
   <body>
     <div id=format>
       <div id="general" style="display: block">
         <h2>This is the Shopping List application. I hope You enjoy!</h2>
-        <img src="/images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
+        <!--<input id="test_btn" type="submit" value="TEST">-->
+        <img src="./images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
         <h1>Successfully set up a webapp hosted by firebase</h1>
         <p>This is the firebase https server that i have set up so far. Below i have added a link to my repository no matter how unnecessary it might be.</p>
         <a target="_blank" href="https://github.com/pacdew/We-Learnen">My github Repository</a>
@@ -73,25 +74,25 @@
       </div>
       <div id="a_logging_in" style="display: none">
         <!--For testing sake my email is the value by default-->
-        <p>Email: <input type="text" id="email_sign_in" value="006075871@coyote.csusb.edu"></input></p>
+        <p>Email: <input type="text" id="a_email" value="006075871@coyote.csusb.edu"></input></p>
         <input id="a_send_link_button" type="submit" value="Send Login Link">
       </div>
       <div id="a_logged_in" style="display: none">
-        <input id="logout_button" type="submit" value="Log Out">
+        <input id="a_logout_button" type="submit" value="Log Out">
+        <div id="list_storage" style="display: none">
+          <!--Display each list that is associated with the user-->
+          <div id="list_storage_view">
+            <img src="./images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
+          </div>
+          <input id="list_edit_button" type="submit" value="Edit List"/>
+        </div>
+        <div id="list_storage_edit" style="display: none">
+          <textarea id="list_storage_edit_view" rows="5" columns="40"></textarea>
+          <input id="list_edit_confirm_button" type="submit" value="Save changes"/>
+          <br>
+          <input id="list_edit_cancel_button" type="submit" value="Cancel"/>
+        </div>
       </div>
     </div>
-<!--
-collect the users e-mail address then call this function to sign in through email.
-"sendSignInLinkToEmail"
-
-<div id="message">
-  <h2>This is the Shopping List application. I hope You enjoy!</h2>
-  <img src="/images/ShoppingList.png" alt="Shopping List Image" height="75" width="75">
-  <h1>Successfully set up a webapp hosted by firebase</h1>
-  <p>This is the firebase https server that i have set up so far. Below i have added a link to my repository no matter how unnecessary it might be.</p>
-  <a target="_blank" href="https://github.com/pacdew/We-Learnen">My github Repository</a>
-</div>
--->
-
   </body>
 </html>

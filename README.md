@@ -22,3 +22,7 @@ This git hub repository is new to me but does seem very useful!
   - set up slight functionality within the firebase application.
   - will work on actual user identification and login functionality.
   - will work on being able to upload lists and the ability to edit them if user is correctly validated
+
+5/22/2020 - authentication between users
+  - Was able to add Email login for a user...
+  - Tried adding some more user authentication but had much to do and wasn't able to progress as much
